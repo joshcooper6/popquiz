@@ -10,13 +10,19 @@ const QuizApp = () => {
   const totalQuestions = questions.length;
   const correctAnswers = results.filter(results => results.result === true).length;
 
+  const [currentChoice, setCurrentChoice] = useState('');
+  const [showProceed, setShowProceed] = useState(false);
+
   useEffect(() => {
-    // Fetch the questions from the server when the component mounts
     axios.get('/questions').then(res => {
       setQuestions(res.data);
       setIsLoading(false);
     });
   }, []);
+
+  // useEffect(() => {
+  //   setShowProceed(true)
+  // }, [currentChoice]);
 
   // useEffect(() => {
   //   console.log(totalQuestions);
@@ -38,6 +44,10 @@ const QuizApp = () => {
     console.log('Correct', correctAnswers);
   }, [results]);
 
+  const nextQuestion = () => {
+    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+  };
+
   const handleAnswerClick = answer => {
     setAnswers(prevAnswers => [...prevAnswers, answer]);
 
@@ -49,7 +59,8 @@ const QuizApp = () => {
       setResults([...results, {
         id: questions[currentQuestionIndex].id,
         result: res.data.correct
-      }])
+      }]);
+      setShowProceed(false);
     });
   };
 
@@ -64,11 +75,15 @@ const QuizApp = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="flex flex-col w-screen h-screen justify-center items-center text-center">
+    <div className="question-wrap">
       <p>{currentQuestion.id}. {currentQuestion.text}</p>
       {currentQuestion.choices.map(choice => (
-        <button key={choice} onClick={() => handleAnswerClick(choice)}>{choice}</button>
+        <button className={currentChoice === choice && 'selected'} key={choice} onClick={() => {setCurrentChoice(choice); setShowProceed(true)} }>{choice}</button>
       ))}
+
+      { showProceed ? <button id={'proceed-btn'} children={'>>'} onClick={() => handleAnswerClick(currentChoice)} /> : null }
+
+      <img src={currentQuestion.image} className="ques_img" />
     </div>
   );
 };
