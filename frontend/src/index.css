@@ -64,6 +64,7 @@ body,
     margin-bottom: 1em;
     font-weight: 800;
     width: 70%;
+    user-select: none;
 }
 
 .question-header {

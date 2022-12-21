@@ -18,7 +18,9 @@ export const Wrap = styled.div`
 `;
 
 export const SelectArtist = styled.select`
-
+    border-radius: 1em;
+    border: 0;
+    padding: 1em;
 `;
 
 export const Logo = styled.h1`
