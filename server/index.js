@@ -79,6 +79,18 @@ const questions = [{
   }
 ];
 
+// app.get('/', (req, res) => {
+//   const questionsWithoutAnswers = questions.map(question => {
+//     return {
+//       id: question.id,
+//       text: question.question,
+//       choices: question.answers,
+//       image: randomImage(images)
+//     };
+//   });
+//   res.json(questionsWithoutAnswers);
+// });
+
 app.get('/questions', (req, res) => {
     const questionsWithoutAnswers = questions.map(question => {
       return {
