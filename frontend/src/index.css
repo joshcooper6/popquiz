@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;500;800;900&display=swap');
+
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif, Arial, Helvetica, sans-serif;
+    font-family: 'Questrial', Verdana, Geneva, Tahoma, sans-serif, Arial, Helvetica, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
+}
+
+.logo {
+    font-family: 'Unbounded', cursive;
+    font-weight: 900;
+}
+
+.logo > span {
+    font-weight: 200;
 }
 
 .ques_img {
@@ -21,15 +29,24 @@ body {
     display: block;
 }
 
-.question-wrap {
+body,
+.question-wrap,
+.flex_col_cent {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    width: 90vw;
     justify-content: center;
     align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.question-wrap {
+    max-width: 800px;
+    width: 90vw;
     background-color: rgba(255, 255, 255, .8);
-    padding: 1em 0 2em 0;
+    padding: 1em 0 3em 0;
     border-radius: 1em;
 }
 
@@ -63,14 +80,6 @@ body {
     box-shadow: 0 0 .5em 0em;
     font-weight: bold;
     animation: scaleUp 500ms linear forwards;
-}
-
-#proceed-btn {
-    width: 50px;
-    height: 50px;
-    font-weight: bold;;
-    border-radius: 100%;
-    animation: fadeIn 500ms linear forwards;
 }
 
 @keyframes scaleUp {
