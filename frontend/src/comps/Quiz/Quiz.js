@@ -79,7 +79,8 @@ const QuizApp = (props) => {
 
     axios.post('/answers', {
       questionId: questions[currentQuestionIndex].id,
-      answer
+      answer,
+      artist
     }).then(res => {
       nextQuestion();
       setResults([...results, {

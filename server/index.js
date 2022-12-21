@@ -53,8 +53,8 @@ app.get('/questions', (req, res) => {
   });
 
 app.post('/answers', (req, res) => {
-  const { questionId, answer } = req.body;
-  const question = questions.find(q => q.id === questionId);
+  const { questionId, answer, artist } = req.body;
+  const question = database[artist].questions.find(q => q.id === questionId);
   if (!question) {
     return res.status(404).json({ error: 'Question not found' });
   }

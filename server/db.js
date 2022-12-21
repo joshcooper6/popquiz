@@ -138,6 +138,77 @@ const db = {
         'https://pbs.twimg.com/profile_images/1323418800876777474/0w4orMOC_400x400.jpg',
         'https://media.allure.com/photos/6287bc403a1999e7216927ec/1:1/w_3712,h_3712,c_limit/Britney%20Spears%20Getty.jpg'
       ]
+    },
+    'Taylor Swift': {
+        questions: [
+            {
+                id: 1,
+                question: "What is Taylor Swift's full name?",
+                answers: ["Taylor Alison Swift", "Tara Swift", "Tamara Swift", "Talia Swift"],
+                correctAnswer: "Taylor Alison Swift"
+            },
+            {
+                id: 2,
+                question: "What year did Taylor Swift release her debut album, 'Taylor Swift'?",
+                answers: ["2006", "2008", "2010", "2012"],
+                correctAnswer: "2006"
+            },
+            {
+                id: 3,
+                question: "Which of the following is NOT a Taylor Swift album?",
+                answers: ["Fearless", "Speak Now", "Maroon", "1989"],
+                correctAnswer: "Maroon"
+            },
+            {
+                id: 4,
+                question: "How many Grammy Awards has Taylor Swift won?",
+                answers: ["6", "8", "10", "12"],
+                correctAnswer: "10"
+            },
+            {
+                id: 5,
+                question: "Which artist did Taylor Swift collaborate with on the song 'I Knew You Were Trouble'?",
+                answers: ["Ed Sheeran", "The Chainsmokers", "Calvin Harris", "Zayn Malik"],
+                correctAnswer: "Calvin Harris"
+            },
+            {
+                id: 6,
+                question: "What is the title of Taylor Swift's ninth studio album?",
+                answers: ["Evermore", "Lover", "Folklore", "Reputation"],
+                correctAnswer: "Evermore"
+            },
+            {
+                id: 7,
+                question: "Which of the following is NOT a single from Taylor Swift's 'Red' album?",
+                answers: ["We Are Never Ever Getting Back Together", "I Knew You Were Trouble", "Begin Again", "Love Story"],
+                correctAnswer: "Love Story"
+            },
+            {
+                id: 8,
+                question: "In which city was Taylor Swift born?",
+                answers: ["New York", "Los Angeles", "Reading", "Nashville"],
+                correctAnswer: "Reading"
+            },
+            {
+                id: 9,
+                question: "Which of the following is NOT a Taylor Swift tour?",
+                answers: ["The Red Tour", "The 1989 World Tour", "The Reputation Stadium Tour", "The Lover Fest"],
+                correctAnswer: "The Lover Fest"
+            },
+            {
+                id: 10,
+                question: "What is the title of Taylor Swift's first extended play (EP)?",
+                answers: ["Fearless", "Speak Now", "Red", "The Taylor Swift Holiday Collection"],
+                correctAnswer: "The Taylor Swift Holiday Collection"
+            }                 
+        ],
+        images: [
+            'https://i.guim.co.uk/img/media/921533de58a4f345b6065b0f388650fe9572c0db/0_0_6000_3600/master/6000.jpg?width=465&quality=85&dpr=1&s=none',
+            'https://static01.nyt.com/images/2020/12/10/arts/10taylor-item2/10taylor-item2-mobileMasterAt3x.jpg',
+            'https://www.billboard.com/wp-content/uploads/2022/10/taylor-swift-tiff-2022-b-billboard-1548.jpg?w=942&h=623&crop=1',
+            'https://pyxis.nymag.com/v1/imgs/dda/a72/f66d4c039e4805c6754e3591b89a52afb5-taylor-new-album.1x.rsquare.w1400.jpg',
+            'https://static01.nyt.com/images/2022/10/24/arts/24taylor-notebook3/24taylor-notebook3-superJumbo.jpg'
+        ]
     }
   };
 
